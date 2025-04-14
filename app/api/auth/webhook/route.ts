@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import prisma from '@/utils/db';
+import {prisma} from '@/utils/db';
 
 /**
  * Webhook handler for Supabase Auth events

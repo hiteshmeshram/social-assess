@@ -1,11 +1,12 @@
 // import prisma from "../../utils/db"
-import {prisma} from "@/utils/db"
+
 import { PostStatus } from "@/app/generated/prisma"
 import { NextRequest, NextResponse } from "next/server"
 import { supabase } from "@/utils/supabase";
 import { useAuth } from "@/utils/AuthContext";
 import { cookies } from "next/headers";
 import { getSupabaseServerSession } from "@/utils/supabase-server";
+import {prisma} from "@/utils/db";
 
 interface Post {
   id?: number;

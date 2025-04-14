@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -181,16 +181,19 @@ export default  function Posts() {
   // NOW we can have conditional rendering after all hooks are called
   if (isLoading) {
     return (
+      <Suspense fallback={<div>Loading...</div>}>
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
           <p className="mt-4 text-gray-600">Loading...</p>
         </div>
       </div>
+      </Suspense>
     );
   }
 
   return (
+    <Suspense fallback={<div>Loading...</div>}>
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow">
@@ -401,6 +404,7 @@ export default  function Posts() {
         />
       )}
     </div>
+    </Suspense>
   );
 }
 
@@ -443,6 +447,7 @@ function PostFormModal({ post, onClose, onSave }: PostFormModalProps) {
   };
   
   return (
+    <Suspense fallback={<div>Loading...</div>}>
     <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg shadow-xl p-6 max-w-2xl w-full mx-4">
         <div className="flex justify-between items-center mb-4">
@@ -564,5 +569,6 @@ function PostFormModal({ post, onClose, onSave }: PostFormModalProps) {
         </form>
       </div>
     </div>
+    </Suspense>
   );
 } 

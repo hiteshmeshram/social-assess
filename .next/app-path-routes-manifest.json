@@ -1,0 +1,18 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/auth/signin/route": "/api/auth/signin",
+  "/api/auth/route": "/api/auth",
+  "/api/auth/signup/route": "/api/auth/signup",
+  "/api/auth/users/route": "/api/auth/users",
+  "/api/auth/webhook/route": "/api/auth/webhook",
+  "/api/ideas/route": "/api/ideas",
+  "/api/posts/route": "/api/posts",
+  "/api/users/route": "/api/users",
+  "/favicon.ico/route": "/favicon.ico",
+  "/c2/page": "/c2",
+  "/page": "/",
+  "/content-ideas/page": "/content-ideas",
+  "/posts/page": "/posts",
+  "/profile/page": "/profile",
+  "/dashboard/page": "/dashboard"
+}

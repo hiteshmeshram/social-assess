@@ -126,10 +126,11 @@ export async function POST(req: NextRequest) {
     // If userId and idea are provided, save to database
     if (userId && idea) {
       console.log('Creating new idea in database');
-      const newIdea = await prisma.idea.create({
+      const newIdea = await prisma.generateIdea.create({
         data:{
           userId,
-          idea
+          title: "",
+          description: ""
         }
       });
       
